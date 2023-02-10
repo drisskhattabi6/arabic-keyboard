@@ -42,14 +42,26 @@ function delElt() {
 }
 
 function youtubeSearch () {
+    if (myTextArea.value  == "" ) {
+        alert('PLZ write your text first!!!!')
+        return
+    }
     window.open(`https://www.youtube.com/results?search_query=${myTextArea.value}`, '_blank');
 }
 
 function googleSearch () {
+    if (myTextArea.value  == "" ) {
+        alert('PLZ write your text first!!!!')
+        return
+    }
     window.open(`https://www.google.com/search?q=${myTextArea.value}`, '_blank');
 }
 
 function saveText() {
+    if (myTextArea.value  == "" ) {
+        alert('PLZ write your text first!!!!')
+        return
+    }
     const content = myTextArea.value;
     const file = new Blob([content], { type: 'text/plain' });
     saveAs(file, "download.txt")
